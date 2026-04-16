@@ -1,0 +1,63 @@
+## 🔹 AI, ML, DL & LLM Relationship (Detailed Understanding)
+Artificial Intelligence (AI) is the overarching field, encompassing all systems that mimic human intelligence. 
+It includes any technique that enables machines to replicate human-like behaviour such as reasoning, learning, decision-making, problem-solving, and even creativity.
+
+Machine Learning (ML) is a subfield of AI that enables systems to learn patterns from data without explicit programming.
+Instead of writing step-by-step instructions, we provide data, and the system learns from it to make predictions or decisions.
+This makes ML highly effective for tasks like spam detection, recommendation systems, and fraud detection.
+
+Deep Learning (DL) is a specialised branch of ML that uses neural networks with multiple layers (deep neural networks). 
+These networks are capable of processing vast amounts of data and extracting complex patterns automatically. 
+Unlike traditional ML, DL does not require manual feature extraction and can work directly with raw, unstructured data such as images, audio, and text. Because it removes the need for human intervention and works efficiently on large datasets, it is often referred to as scalable ML.
+
+Large Language Models (LLMs), like GPT, are advanced deep learning models built using neural networks, specifically transformer architectures. 
+These models are trained on massive amounts of text data and are designed to understand context, generate human-like responses, and perform tasks such as translation, summarization, question answering, and even coding assistance.
+
+---
+
+## 🔹 Relationship Flow (Hierarchy)
+
+AI → ML → DL → LLMs
+
+* **AI** → Broad field (everything intelligent)
+* **ML** → Learning from data
+* **DL** → Learning using neural networks
+* **LLMs** → Language-focused deep learning models
+
+---
+
+## 🔹 Why This Matters (Cybersecurity Context)
+
+As was said, knowledge is power, and with these last few tasks, you have started your journey in the pursuit of that knowledge.
+
+Understanding AI, ML, DL, and LLMs is extremely important in cybersecurity because:
+
+* AI is used in threat detection systems
+* ML helps identify unusual patterns (anomalies) in network traffic
+* DL enables advanced malware detection and behavior analysis
+* LLMs can be used for automated analysis, report generation, and even attack simulations
+
+This knowledge helps you understand both:
+
+* 🔐 How systems defend against attacks
+* ⚠️ How attackers might misuse AI
+
+Now let's take a look at how all of the discussed is affecting our industry, shall we?
+
+---
+
+## 🔹 Key Takeaways
+
+* AI is the umbrella term
+* ML is about learning from data
+* DL is advanced ML using neural networks
+* LLMs are powerful DL models for language tasks
+
+---
+
+## 🔹 Summary 
+
+* AI = Intelligence simulation
+* ML = Learning from data
+* DL = Neural network-based learning
+* LLM = Language-focused DL model
