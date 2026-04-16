@@ -1,0 +1,188 @@
+# 🔐 AI Security Threats in Cybersecurity
+
+---
+
+## 🔹 Introduction
+
+Now that we've covered how AI has evolved and arrived where it is today, we have a better understanding of the technology fueling the meteoric rise in the use of AI and changing countless industries.
+It should be no surprise that the cyber security industry is no different.
+In this task, we focus on how advancements in AI are being leveraged by adversaries, exploring the world of **AI security threats**.
+
+---
+
+## 🔹 Categories of AI Security Threats
+
+AI security threats can be divided into two main categories:
+
+### 1️⃣ Vulnerabilities in AI Models
+
+(New threats introduced due to AI integration in systems)
+
+### 2️⃣ Enhanced Attacks
+
+(Existing attacks that become more powerful using AI)
+
+---
+
+## 🔹 AI in Cybersecurity (Framework)
+
+Understanding AI threats can feel overwhelming, so frameworks help.
+
+### 🧭 ATLAS (MITRE Framework)
+
+* Inspired by the **MITRE ATT&CK Framework**
+* Focused specifically on **AI-related threats**
+* Helps understand attacker behavior in AI systems
+
+---
+
+## 🔹 Vulnerabilities in AI Models
+
+### ⚠️ 1. Prompt Injection
+
+* Prompts guide AI behavior
+* Attackers override original instructions
+
+📌 Example:
+A chatbot instructed not to reveal system info can be manipulated to expose it.
+
+👉 Risk:
+
+* Information leakage
+* Harmful content generation
+
+---
+
+### ⚠️ 2. Data Poisoning
+
+* Attackers manipulate training data
+
+📌 Example:
+Spam detection model trained with poisoned data → fails to detect spam correctly
+
+👉 Risk:
+
+* Incorrect predictions
+* Biased outputs
+
+---
+
+### ⚠️ 3. Model Theft
+
+* Unauthorized access to AI model
+
+📌 Method:
+
+* Query model API
+* Use outputs to train a clone model
+
+👉 Risk:
+
+* Intellectual property theft
+* Malicious reuse
+
+---
+
+### ⚠️ 4. Privacy Leakage
+
+* AI reveals sensitive training data
+
+📌 Example:
+Medical AI leaking patient data
+
+👉 Risk:
+
+* Confidential data exposure
+
+---
+
+### ⚠️ 5. Model Drift
+
+* Model performance degrades over time
+
+📌 Cause:
+
+* Changing data/environment
+
+👉 Risk:
+
+* Reduced accuracy
+* Need for retraining
+
+---
+
+## 🔹 Enhanced Attacks Using AI
+
+---
+
+### 💣 1. AI-Generated Malware
+
+Generative AI can:
+
+* Instantly generate code
+* Assist developers
+
+⚠️ But also:
+
+* Enables attackers to create malware easily
+* Reduces skill barrier for attacks
+
+---
+
+### 🎭 2. DeepFakes
+
+AI can generate:
+
+* Fake voices
+* Fake videos
+* Realistic identities
+
+📌 Example:
+Fake boss asking for confidential data
+
+👉 Risk:
+
+* Identity spoofing
+* Social engineering attacks
+* Fraud
+
+---
+
+### 🎣 3. AI-Powered Phishing
+
+Traditional phishing had flaws like:
+
+* Poor grammar
+* Obvious mistakes
+
+💡 With AI:
+
+* Fluent, realistic emails
+* Context-aware messages
+
+👉 Result:
+
+* Harder to detect phishing
+* Higher success rate
+
+⚠️ Note:
+Even though models like GPT have restrictions, attackers can bypass them using techniques like prompt engineering.
+
+---
+
+## 🔹 Key Takeaways
+
+* AI introduces **new vulnerabilities**
+* AI also **enhances existing attacks**
+* Security professionals must understand both sides
+
+---
+
+## 🔹 Conclusion
+
+AI is transforming cybersecurity in two ways:
+
+* 🛡️ Defense (threat detection, automation)
+* ⚠️ Offense (advanced attacks, automation for attackers)
+
+Understanding these threats is crucial for building secure AI systems and defending against modern cyber attacks.
