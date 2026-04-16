@@ -1,0 +1,104 @@
+🔹 Artificial Intelligence (AI)
+
+We must empower our cyber security workforce to combat AI security threats. Knowledge is power, so we begin by arming you with the foundational knowledge of AI and ML. Let's start by discussing how we define "Artificial Intelligence".
+Artificial intelligence refers to a machine or computer system that is able to carry out tasks that would otherwise require human reasoning, comprehension, problem-solving, or creativity.
+It's a term that, truthfully, doesn't have just one simple definition due to the sheer scope of its application in today's society and its potential applications in the future. Still, we can use this definition to begin to understand what it is and where it started.
+This term and field dates back to the 1950s when research began on the pursuit of having machines perform tasks by simulating human intelligence; however, this was still a niche term that was not widely known.
+
+🔹 Machine Learning (ML)
+The next significant advancement in the development of AI came with the emergence of ML.
+ML is a subfield of AI that refers to a computer’s ability to learn from data without being given instructions and is comparable to how the human brain learns.
+Over time, with more data and time, these algorithms will get better at accuracy and decisions.
+
+🔹 Machine Learning Lifecycle
+ML follows a structured lifecycle to ensure the reliable development and deployment of models.
+This process begins with defining the problem, such as determining whether an email is spam.
+Next, data is collected, cleaned, and prepared through feature engineering, ensuring meaningful patterns are extracted while avoiding overfitting (When a model's familiarity with the training data causes a failure to make generalisations on unseen/raw data).
+The model is then trained using a selected algorithm, followed by evaluation and tuning to optimise performance.
+Once refined, the model is deployed into a production environment for real-world use, such as classifying emails in real-time.
+However, the lifecycle doesn’t end there—ongoing monitoring ensures the model maintains accuracy over time, triggering retraining when needed.
+Since models require continuous improvement, the Machine Learning Lifecycle remains an iterative process.
+
+🔹 Machine Learning Algorithms
+
+ML algorithms are the mathematical methods used to learn patterns from data, while ML models are the trained outputs derived from these algorithms.
+These algorithms consist of three key components:
+A decision process, which makes predictions or classifications based on input data
+An error function, which evaluates performance and provides feedback
+A model optimisation process, which fine-tunes the algorithm to minimise errors and improve accuracy
+
+This iterative process continues until the model reaches a satisfactory performance level.
+
+🔹 Types of Machine Learning
+ML algorithms fall into four main categories:
+
+1. Supervised Learning
+Relies on labeled data to train models for classification or regression tasks, such as predicting house prices or identifying spam emails.
+
+2. Unsupervised Learning
+Works with unlabeled data to discover hidden patterns, often using clustering, association, or dimensionality reduction techniques.
+
+3. Semi-Supervised Learning
+Combines elements of both, using a small portion of labeled data to guide the learning process.
+
+4. Reinforcement Learning
+Mimics human learning by rewarding correct decisions and penalizing mistakes, allowing an agent to refine its actions over time to achieve the best outcome.
+
+🔹 Neural Networks and Deep Learning (DL)
+
+If you recall, the main objective of AI is to enable computers to behave like humans.
+One method that allows us to do this is through the use of neural networks.
+If you cast your mind back to high school biology, you may remember being taught how the human brain works.
+The human brain processes information using interconnected neurons (a type of cell responsible for transmitting communications between the body and brain), which communicate with each other using synapses.
+Synapses allow the brain to send electrical/chemical signals from neuron to neuron; in other words, they are a connection.
+This network of neurons learns by adjusting the strengths of these connections when we experience something new based on patterns we encounter.
+It's this behaviour that is replicated in a neural network.
+
+🔹 Neural Network Structure
+
+Like the human brain processes sensory input:
+
+The input layer receives raw data, with the number of nodes depending on the data type (e.g., a 4x4 pixel image has 16 nodes).
+Each node represents a neuron, and connections between them act as synapses.
+The hidden layers process and refine the input, bringing the network closer to a prediction.
+Each connection has a weight, determining its importance.
+The output layer then produces the final prediction.
+🔹 Example: Number Recognition
+
+Consider a neural network tasked with recognising a number from an image.
+
+Each hidden layer extracts different features
+Early layers detect edges and curves
+Deeper layers combine these patterns to form a complete number
+
+Example:
+
+Lines → may indicate 1 or 7
+Curves → increase likelihood of 3, 8, or 0
+The output layer, with 10 nodes (one per digit), selects the most likely number based on the highest prediction value.
+This self-learning process mimics the human brain.
+When a network has more than three layers, it is classified as a DL algorithm — hence the term "deep learning."
+
+🔹 ML vs DL
+DL and ML can get confused sometimes, but we can now understand the key differences.
+Like ML, DL is concerned with receiving data as input and producing some kind of prediction or classification as output.
+DL can take in labelled datasets, but the key difference is that:
+
+➡️ DL doesn't need the data to be labelled
+A DL algorithm can take unlabelled, unstructured raw data and determine its key features, which separate it from other categories.
+
+🔸 Advantage of DL
+No human interaction required
+Self-learning
+Works with large datasets
+More scalable
+This is possible through neural networks.
+
+🔹 Why Deep Learning Grew Recently
+The idea of neural networks has been around for decades.
+But DL has exploded in recent years because:
+Mass digitisation of data
+Availability of large datasets
+Improved computational power
+This led to a new era of AI with more capabilities and potential.
+
