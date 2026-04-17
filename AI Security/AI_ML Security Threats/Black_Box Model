@@ -1,0 +1,193 @@
+# 🧩 Models as a Black Box & Model Cards (AI Transparency)
+
+---
+
+## 🔹 Models Are a Black Box
+
+When a security team audits traditional software:
+
+* Source code can be read
+* Binaries can be analysed
+* Logic can be traced
+
+👉 But AI models are different.
+
+A trained model consists of:
+
+* Billions of floating-point weights
+* No human-readable logic
+* No clear trace of decisions
+
+---
+
+### ⚠️ Key Problem
+
+You cannot:
+
+* Open the model
+* See how decisions are made
+* Trace behaviour to specific data
+
+👉 This makes AI models a true **“black box”**
+
+---
+
+## 🔹 Why This Matters
+
+Trusting a model = trusting its **training process**
+
+---
+
+### 🔍 What We CAN Do
+
+* Test inputs and outputs
+* Benchmark performance
+* Perform red teaming (adversarial testing)
+
+---
+
+### ❗ Limitation
+
+These methods are:
+
+* Sampling-based
+* Not full auditing
+
+👉 They only show:
+
+* What the model did
+
+👉 They cannot show:
+
+* What the model *might do*
+
+---
+
+### 🔐 Security Insight
+
+* Attack surface depends on training data
+* Training process is **opaque (hidden)**
+
+---
+
+## 🔹 Model Cards
+
+To solve this transparency issue, **Model Cards** were introduced.
+
+📅 Introduced by Google (2019)
+
+👉 A model card is a structured document describing:
+
+* How the model was built
+* What it is used for
+* Its limitations
+
+---
+
+## 🔹 What a Good Model Card Contains
+
+| Section            | Description                               |
+| ------------------ | ----------------------------------------- |
+| Training Data      | Sources, filtering, biases                |
+| Intended Use       | What it should and should NOT be used for |
+| Evaluation Results | Performance metrics                       |
+| Known Limitations  | Weaknesses and failure cases              |
+| Bias Assessment    | Any bias in data or output                |
+| Licence            | Legal usage rights                        |
+
+---
+
+### 🧠 Analogy
+
+Model card = **Nutritional label for AI**
+
+👉 You cannot see inside
+👉 But label tells you:
+
+* Ingredients
+* Risks
+* Limitations
+
+---
+
+## 🔹 The Reality (Gaps in Model Cards)
+
+In practice, model cards are often:
+
+* Incomplete
+* Vague
+* Missing entirely
+
+---
+
+### ⚠️ Why?
+
+* No strict regulations
+* Transparency reduces adoption
+* Weak incentives to disclose flaws
+
+---
+
+### 📉 Evidence
+
+* Documentation gaps exist across AI supply chains
+* Even datasets lack proper labeling
+
+---
+
+## 🔹 Security Risk
+
+A missing or weak model card means:
+
+👉 You don’t know:
+
+* What data was used
+* What risks exist
+* How the model behaves under edge cases
+
+---
+
+### 🚨 Interpretation
+
+* Not just inconvenience
+* It is a **warning sign**
+
+---
+
+## 🔹 Final Insight
+
+Model card = **Audit trail of AI model**
+
+Without it:
+
+* No transparency
+* No accountability
+* No trust
+
+---
+
+## 🔹 Conclusion
+
+AI models are fundamentally:
+
+* Opaque
+* Complex
+* Difficult to audit
+
+👉 Therefore:
+
+Security must rely on:
+
+* Documentation
+* Testing
+* Trust in the development process
+
+---
+
+### ⚠️ Final Line
+
+In security:
+
+👉 Hope is NOT a control.
+
+---
