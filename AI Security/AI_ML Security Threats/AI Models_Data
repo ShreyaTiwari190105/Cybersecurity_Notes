@@ -1,0 +1,179 @@
+# 📊 AI Data Supply Chain & Security Risks
+
+---
+
+## 🔹 Introduction
+
+In the AI/ML Security Threats room, we explored the machine learning lifecycle and understood that before a model is trained, data must be collected and cleaned.
+
+However, this raises critical questions:
+
+* Where is the data collected from?
+* Who is responsible for cleaning it?
+
+These questions have **major security implications**, and many organisations today do not fully understand them.
+
+---
+
+## 🔹 Where Does the Data Come From?
+
+Training large AI models requires massive datasets.
+
+📌 Example:
+
+* GPT-3 → ~570GB of filtered text
+
+To achieve this scale, data is collected from multiple sources:
+
+---
+
+### 📂 Data Sources
+
+| Source            | Description                                              | Trust Level |
+| ----------------- | -------------------------------------------------------- | ----------- |
+| Web Scraping      | Public internet data (news, blogs, forums, social media) | Low         |
+| Licensed Datasets | Data agreements with platforms (e.g., Reddit)            | Medium      |
+| Synthetic Data    | AI-generated data                                        | Variable    |
+| Internal Corpora  | Company data (logs, transcripts, records)                | Higher      |
+
+---
+
+### 🌐 Common Crawl
+
+* Most widely used dataset
+* Used in GPT, DeepSeek, LLaMA
+
+📌 Key Points:
+
+* GPT-3 → 60% data from Common Crawl
+* Modern models rely even more on it
+* Data is "filtered", but filtering transparency is unclear
+
+👉 Security concern starts here.
+
+---
+
+## 🔹 The Problem of Data Provenance
+
+Data provenance means tracking:
+
+* Where data came from
+* When it was collected
+* Whether it was modified
+
+🚨 Problem:
+Most AI systems **cannot answer these questions properly**
+
+---
+
+### 📉 Findings
+
+* 70% dataset licenses → **unspecified**
+* 66% labeled datasets → **incorrectly categorized**
+
+👉 Result:
+Organisations often:
+
+* Don’t know what data they’re using
+* Don’t know legal implications
+* Don’t know risks
+
+---
+
+## 🔹 ML-BOM (Machine Learning Bill of Materials)
+
+Inspired by software security (SBOM after SolarWinds attack)
+
+### 📌 ML-BOM Includes:
+
+* Dataset sources
+* Licenses
+* PII categories
+* Filtering decisions
+
+🚨 Reality:
+Most organisations **do not maintain ML-BOM**
+
+---
+
+## 🔹 PII (Personally Identifiable Information) Risks
+
+Large-scale data scraping often collects sensitive data:
+
+* Medical records
+* Emails
+* Personal discussions
+* Political views
+
+---
+
+### ⚖️ GDPR Conflict
+
+* GDPR → Data minimisation
+* AI → "More data is better"
+
+👉 Direct conflict between privacy & performance
+
+---
+
+### 🚨 Real Evidence
+
+Truffle Security analysis:
+
+* Scanned Common Crawl (400TB data)
+* Found ~12,000 live API keys & passwords
+
+👉 Risk:
+Models can:
+
+* Leak credentials
+* Reveal training data
+* Expose sensitive information
+
+---
+
+## 🔹 Key Insight
+
+This is NOT a traditional attack.
+
+❗ It is a **data problem during training**
+
+Once data is inside the model:
+
+* It is extremely difficult to remove
+* No simple patch exists
+
+---
+
+## 🔹 Data Supply Chain Risk
+
+A model’s behaviour depends on:
+
+* Data quality
+* Data source
+* Data integrity
+
+If training data is:
+
+* Unverified
+* Manipulated
+* Contaminated
+
+👉 The model becomes vulnerable
+
+---
+
+## 🔹 Final Conclusion
+
+The AI data supply chain is:
+
+* Real
+* Critical
+* Highly vulnerable
+
+However:
+
+👉 It is currently **invisible in most organisations**
+
+Understanding and securing data pipelines is just as important as securing software systems.
+
