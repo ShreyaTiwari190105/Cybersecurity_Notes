@@ -1,0 +1,193 @@
+# 🤖 Pre-Trained Models, Fine-Tuning & Security Risks
+
+---
+
+## 🔹 Introduction
+
+Training a Large Language Model (LLM) from scratch requires:
+
+* Trillions of tokens
+* Massive compute infrastructure
+* Tens of millions of dollars
+
+👉 For most organisations, this is not feasible.
+
+Therefore, modern AI development relies on:
+
+➡️ **Using pre-trained models and building on top of them**
+
+---
+
+## 🔹 Pre-Trained Models
+
+A **pre-trained model** is already trained on a large, general-purpose dataset.
+
+### 📌 What it learns:
+
+* Language structure (grammar)
+* Facts and knowledge
+* Reasoning patterns
+
+---
+
+### 📦 Availability
+
+Pre-trained models are provided by large organisations:
+
+* Open weights → e.g., Meta LLaMA
+* API access → e.g., GPT
+
+---
+
+## 🔹 Fine-Tuning
+
+Fine-tuning is the process of:
+
+➡️ Training a pre-trained model further on a **smaller, domain-specific dataset**
+
+---
+
+### 📌 Examples:
+
+* Healthcare → medical data
+* Law → case laws
+* Cybersecurity → threat data
+
+---
+
+### 🔄 What Fine-Tuning Changes
+
+* Task-specific behaviour
+* Tone and style
+* Domain knowledge
+
+---
+
+### ❗ What Fine-Tuning Does NOT Change
+
+* Base model weights
+* Original training data influence
+* Hidden behaviours
+
+---
+
+## 🔹 The Inheritance Problem
+
+When you fine-tune a model, you inherit everything from the base model.
+
+👉 Including things you:
+
+* Cannot see
+* Did not choose
+* Did not audit
+
+---
+
+### ⚠️ What Gets Inherited
+
+* Pre-existing biases
+* Hidden behaviours
+* Weak safety mechanisms
+
+---
+
+## 🔹 Security Implications of Inheritance
+
+---
+
+### 1️⃣ Safety Alignment Erodes (Not Breaks)
+
+Research (Stanford & Princeton):
+
+* Safety defenses can be weakened
+* Just **10 adversarial examples** can compromise alignment
+
+💡 Key Idea:
+
+* Safety doesn’t disappear
+* It slowly degrades
+
+📌 Analogy:
+Safe path in forest → new paths added → safe path becomes less dominant
+
+---
+
+### 2️⃣ Specialisation Increases Attack Surface
+
+Research (Cisco):
+
+* Fine-tuned models are more vulnerable to prompt injection
+
+👉 Reason:
+
+* Narrow focus → less robustness
+
+📌 Example:
+
+* Financial model → easier to attack with finance-related prompts
+
+---
+
+### 3️⃣ Version Tracking Problem
+
+Fine-tuning depends on a specific base model version.
+
+🚨 Risk:
+
+* If base model had:
+
+  * Backdoor
+  * Bad data
+
+👉 All derived models inherit it
+
+---
+
+### ❗ Issue
+
+Most organisations:
+
+* Don’t track base model version properly
+* Cannot audit inherited risks
+
+---
+
+## 🔹 “Inheritance Tax” Concept
+
+When deploying a fine-tuned model:
+
+👉 You are NOT just deploying your fine-tuning work
+
+👉 You are deploying:
+
+* Entire base model
+* Its data
+* Its biases
+* Its vulnerabilities
+
+---
+
+## 🔹 Key Insight
+
+Fine-tuning is powerful but:
+
+❗ It does NOT clean or fix the base model
+
+---
+
+## 🔹 Final Conclusion
+
+* AI development today depends heavily on pre-trained models
+* Fine-tuning improves performance but introduces hidden risks
+* Security must consider the **entire model lineage**, not just final output
+
+---
+
+## 🔹 Final Thought
+
+Fine-tuning doesn’t start from scratch.
+
+👉 It builds on something you don’t fully control.
+And that is exactly where the security risk lies.
+
+---
