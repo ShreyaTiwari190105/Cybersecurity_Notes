@@ -1,0 +1,185 @@
+# ⚙️ Building the Model: Key Concepts & Security Implications
+
+---
+
+## 🔹 Introduction
+
+When we covered the ML lifecycle in AI/ML Security Threats, we did so at a high level: data in, model out.
+This section focuses on the **key concepts during model building** and, more importantly, **why they matter from a security perspective**.
+
+---
+
+## 🔹 Epochs and Overfitting
+
+### 📌 Epoch
+
+An **epoch** is one complete pass of the training algorithm through the entire dataset.
+
+* Models are trained over multiple epochs
+* Each pass improves predictions
+
+---
+
+### ⚠️ Overfitting
+
+Training too long leads to **overfitting**:
+
+* Model memorises training data
+* Fails on new/unseen data
+
+---
+
+### 🔐 Security Impact
+
+Overfitting can cause:
+
+* Memorisation of sensitive data
+* Reproduction of private information when prompted
+
+👉 This makes overfitting a **data leakage risk**
+
+---
+
+## 🔹 Model Validation
+
+To detect overfitting:
+
+* A portion of data is kept aside → **Validation Set**
+* Model is tested on unseen data during training
+
+---
+
+### 📊 Key Observation
+
+* Training accuracy ↑
+* Validation accuracy ↓ or constant
+
+👉 Indicates **overfitting**
+
+---
+
+### 🔐 Security Importance
+
+Validation acts as a **quality gate**:
+
+* Ensures real-world reliability
+* Detects:
+
+  * Bias
+  * Anomalies
+  * Poisoned data
+
+🚨 Without validation:
+
+* Model behaviour becomes unpredictable
+* Security risks go unnoticed
+
+---
+
+## 🔹 Post-Training Optimisation
+
+After training, models are optimised for efficiency.
+
+---
+
+### ✂️ 1. Pruning
+
+* Removes unnecessary parameters
+* Reduces model size
+
+🔐 Security Concern:
+
+* Alters model behaviour
+* Often undocumented
+
+---
+
+### 🔢 2. Quantisation
+
+* Reduces numerical precision (e.g., 32-bit → 8-bit)
+* Improves performance
+
+🔐 Security Concern:
+
+* Can weaken safety mechanisms
+* Backdoor detection may fail
+
+---
+
+### ⚠️ Key Risk
+
+These steps are often:
+
+* Done after training
+* Handled by third parties
+
+👉 Result:
+Organisations may use models with **unknown behavioural changes**
+
+---
+
+## 🔹 Federated Learning
+
+### 📌 Concept
+
+Instead of central training:
+
+* Training happens across multiple devices
+* Only updates (weights) are shared
+* Raw data stays local
+
+---
+
+### ✅ Benefit
+
+* Improved privacy
+* No direct data sharing
+
+---
+
+### ⚠️ Security Trade-off
+
+* Harder to verify training integrity
+* Participants can send **poisoned updates**
+
+👉 Risk:
+
+* Model manipulation
+* Undetected attacks
+
+---
+
+### 🔐 Key Question Shift
+
+From:
+
+* "Who controls the data?"
+
+To:
+
+* "Who controls the aggregation?"
+
+---
+
+## 🔹 Key Takeaways
+
+* More training ≠ better model (overfitting risk)
+* Validation is critical for security
+* Post-training changes can introduce hidden risks
+* Federated learning improves privacy but weakens trust control
+
+---
+
+## 🔹 Final Insight
+
+Model building is not just about accuracy.
+
+👉 It is deeply tied to:
+
+* Data security
+* Model integrity
+* Trustworthiness
+
+Every stage introduces potential vulnerabilities if not properly managed.
+
+---
