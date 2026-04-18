@@ -1,0 +1,231 @@
+# 🧠 LLM Fundamentals: Tokens, Randomness & Control Parameters
+
+---
+
+## 🔹 Introduction
+
+Before working with LLMs effectively, there are some fundamental concepts to understand.
+
+---
+
+## 🔹 Understanding Tokens
+
+LLMs do not read text like humans.
+
+👉 They break text into **tokens** — the smallest units they understand.
+
+---
+
+### 📌 Key Points
+
+* 1 token ≈ 3–4 characters
+* Most English words = 1–2 tokens
+
+---
+
+### 📌 Examples
+
+* "the" → 1 token
+* "ChatGPT" → "Chat" + "GPT"
+* "butterfly" → "butter" + "fly"
+
+---
+
+### 🔢 Token Representation
+
+Each token is converted into a **unique number (ID)**
+
+📌 Example:
+"Hello, how are you?" →
+[15496, 11, 703, 527, 499]
+
+👉 The model works only with numbers, not words.
+
+---
+
+### ⚙️ Tokenisation Methods
+
+Different models use different techniques:
+
+* GPT → Byte Pair Encoding (BPE)
+* BERT → WordPiece
+
+👉 Same sentence → different token sequences
+
+---
+
+## 🔹 Determinism vs Nondeterminism
+
+### 📌 Deterministic Systems
+
+* Same input → same output
+* Example: traditional programs
+
+---
+
+### 📌 LLM Behaviour
+
+* Same input → different outputs
+
+👉 This is **nondeterminism**
+
+---
+
+### 🔐 Security Implication
+
+* Output variability makes defence difficult
+* Same attack → different results each time
+
+👉 Major challenge in AI security
+
+---
+
+## 🔹 Controlling the Chaos (Model Parameters)
+
+LLMs are probability-based systems.
+
+👉 They predict the **next token** based on probability.
+
+We can control behaviour using parameters:
+
+* Temperature
+* Max Tokens
+* Top-p
+
+---
+
+## 🔹 Temperature (Randomness Dial)
+
+Controls how creative or random the model is.
+
+---
+
+### 📊 Temperature Ranges
+
+| Range     | Behaviour              | Use Case               |
+| --------- | ---------------------- | ---------------------- |
+| 0.0 – 0.3 | Deterministic, precise | Code, factual answers  |
+| 0.7 – 1.0 | Balanced creativity    | Writing, brainstorming |
+| 1.2 – 1.5 | Unstable outputs       | Experimental           |
+| 1.5+      | Chaotic                | Avoid                  |
+
+---
+
+### 🔐 Security Insight
+
+Higher temperature = more unpredictability
+Lower temperature = more control
+
+---
+
+## 🔹 Max Tokens (Length Control)
+
+Limits response length.
+
+---
+
+### 📌 Key Points
+
+* 1 token ≈ 0.75 words
+* 100 tokens ≈ 75 words
+
+---
+
+### 📊 Common Usage
+
+* Short answers → 50–150 tokens
+* Detailed explanation → 500–1000 tokens
+* Reports → 2000+ tokens
+
+---
+
+### ⚠️ Note
+
+* It’s a **limit**, not a guarantee
+* Model may use fewer tokens
+
+---
+
+## 🔹 Top-p (Nucleus Sampling)
+
+Alternative to temperature.
+
+---
+
+### 📌 Concept
+
+* Selects from most probable tokens only
+* Example: top-p = 0.9 → only top 90% probability tokens considered
+
+---
+
+### ⚠️ Important Rule
+
+👉 Use **temperature OR top-p**, not both
+
+---
+
+### 🔐 Security Insight
+
+* Restricts randomness
+* Reduces unpredictable outputs
+
+---
+
+## 🔹 Context Window (Memory Limit)
+
+Each model has a memory limit in tokens.
+
+---
+
+### 📊 Examples
+
+* GPT-3.5 → ~8k tokens
+* Claude 3.5 → ~200k tokens
+* Gemini → 1M+ tokens
+
+---
+
+### ⚠️ Important Behaviour
+
+* Exceed limit → earlier data is removed
+* Model “forgets” context
+
+---
+
+## 🔹 Practical Insight
+
+Changing parameters changes:
+
+👉 How the model responds
+👉 NOT what it knows
+
+---
+
+### 📌 Example
+
+Prompt: "Explain SQL Injection"
+
+* Temp = 0.0 → textbook answer
+* Temp = 1.0 → creative explanation
+
+---
+
+## 🔹 Key Takeaways
+
+* Tokens = how AI understands text
+* LLMs are nondeterministic
+* Parameters control behaviour
+* Context window limits memory
+
+---
+
+## 🔹 Final Insight
+
+LLMs are not fixed systems.
+
+👉 They are probability engines you can control.
+
+Mastering these controls = mastering prompt engineering.
+
+---
